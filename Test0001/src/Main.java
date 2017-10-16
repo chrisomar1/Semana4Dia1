@@ -52,6 +52,62 @@ public class Main {
 		System.out.println(cadena.substring(3, 6));
 		//Minúsculas
 		System.out.println(cadena.toLowerCase());
+		
+		//Arrays
+		String [] meses = {"Jan","Feb", "Mar", "Apr", "May", 
+				"Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+		String [] sem = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+		
+		//Objetivo: mostrar enero, julio, noviembre, diciembre y marzo en la misma línea.
+		System.out.print(meses[0]+" "+meses[6]+" "+meses[10]+" "+meses[11]+" "+meses[2]+" "+sem[0]+" "+sem[4]+" "+sem[1]+" ");
+		
+		//Fallo provocado
+		//System.out.println(sem[8]);
+		
+		boolean x = true;
+		boolean az = false;
+		
+		
+		System.out.println("\n\n");
+		//System.out.println(!x != !az);
+		System.out.println("\n\n");
+		
+		//System.out.println(x && az);
+		/*
+		if(x == az)
+		{
+			System.out.println("Chana!!!");
+		}
+		else
+		{
+			System.out.println("Juana!!!");
+		}*/
+		//Bloque de palacio de fierro
+		if(x == az)
+		{
+			System.out.println("Chana!!!");
+		}
+		else if(x == az)
+		{
+			System.out.println("Juana!!!");
+		}
+		else if(x == az)
+		{
+			System.out.println("Melón!!!");
+		}
+		else if(!x == !az)
+		{
+			System.out.println("Sandía!!!");
+		}
+		else if(!(x == !az))
+		{
+			System.out.println("La vieja del otro día!!!");
+		}
+		else
+		{
+			System.out.println("Ni modo!!!");
+		}
+		
 	}
   
 }
