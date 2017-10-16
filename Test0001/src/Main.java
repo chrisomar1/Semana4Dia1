@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -83,6 +84,7 @@ public class Main {
 			System.out.println("Juana!!!");
 		}*/
 		//Bloque de palacio de fierro
+		/*
 		if(x == az)
 		{
 			System.out.println("Chana!!!");
@@ -107,7 +109,66 @@ public class Main {
 		{
 			System.out.println("Ni modo!!!");
 		}
+		*/
 		
+		//Switch de la mexicana que fruta vendía.
+		System.out.println("\n\n");
+		/*
+		String opcion = "Chana";
+
+		do
+		{
+			Scanner lector = new Scanner(System.in);
+			opcion = lector.nextLine();
+			
+			switch(opcion)
+			{
+			
+			case "Chana":
+				System.out.println("Chana!!");
+				break;
+			case "Juana":
+				System.out.println("Juana!!");
+				break;
+			case "Chona":
+				System.out.println("Chona!!");
+				break;
+			default:
+				System.out.println("Ninguno!!");
+				break;
+			
+			}
+		}while(opcion!="Christian");	*/	
+		
+		//Le da equals el método
+		/*String cadena5 = "Hola";
+		
+		if(cadena5.equals("Hola "))
+		{
+			System.out.println("Son iguales!!");
+		}
+		else
+			System.out.println("No son iguales!!");*/
+		
+		//For each
+		/*
+		for(String i:meses)
+		{
+			System.out.print(i);
+		}*/
+		
+		
+		//Bucle while
+		/*
+		int contador = 0;
+		while(contador < meses.length)
+		{
+			System.out.println((contador+1)+" : "+meses[contador]);
+			contador++;
+		}*/
+		
+		CuentaPalabras cPlb = new CuentaPalabras(7);
+		cPlb.cuentaLetras();
 	}
   
 }
