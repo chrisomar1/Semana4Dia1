@@ -33,6 +33,25 @@ public class Main {
 		double x1 = ((-b) + Math.sqrt(Math.pow(b, 2)-(4*a*c)))/(2*a);
 		double x2 = ((-b) - Math.sqrt(Math.pow(b, 2)-(4*a*c)))/(2*a);
 		System.out.println("Chicharronera: X1 = "+x1+" , X2 = "+x2);
+		
+		String cadena = "Parangaricutirimicuaro";
+		
+		//Float flotante = 0.0f;
+		System.out.println("///////// Cadenas ////////");
+		String cadenaCesar = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		int espacio = 3;
+		System.out.println(cadena);
+		for(int x = 0; x<cadena.length(); x++)
+		{
+			System.out.println(cadena.charAt(x));    //Acceder a cada cada letra de la cadena de caracteres
+			//Hacer sustitución.
+			cadena = cadena.replace(cadena.charAt(x), cadenaCesar.charAt(x+espacio));
+		}
+		System.out.println(cadena);
+		//Subcadenas
+		System.out.println(cadena.substring(3, 6));
+		//Minúsculas
+		System.out.println(cadena.toLowerCase());
 	}
-
+  
 }
