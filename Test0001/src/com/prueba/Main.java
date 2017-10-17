@@ -1,9 +1,20 @@
+package com.prueba;
 import java.util.Scanner;
+import java.io.IOException;
+import com.salon4.llorar.*;
 
 public class Main {
-
+	
+	public static int id = 0;
+	public static long id2 = 0;
+	
+	public static final int valorFinal = 9;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		id = 25;
+		
 		System.out.println("hola");
 		System.out.println("Christian");
 		
@@ -170,9 +181,83 @@ public class Main {
 			contador++;
 		}*/
 		
-		CuentaPalabras cPlb = new CuentaPalabras(7);
-		cPlb.cuentaLetras();
-		cPlb.hola();
-	}
+		//CuentaPalabras cPlb = new CuentaPalabras(7);
+		//cPlb.cuentaLetras();
+		//cPlb.hola();
+
+		
+		//Bloque try and catch
+		//Controlar excepciones
+		//NullPointer, NumberFormat, OutOfBounds, IO, 
+		/*try
+		{
+			int contador = 0;
+			while(contador < 14)
+			{
+				System.out.println((contador+1)+" : "+meses[contador]);
+				contador++;
+			}
+		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Excepción: "+ex);
+		}
+		catch(NullPointerException ex)
+		{
+			System.out.println("Excepción: "+ex);
+		}
+		catch(ClassCastException ex)
+		{
+			System.out.println("Excepción: "+ex);
+		}
+		catch(NumberFormatException ex)
+		{
+			System.out.println("Excepción: "+ex);
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Excepción: "+ex);
+		}
+		finally
+		{
+			//Bloque finally, se ejecuta sin importar si se llegó a la excepción
+			System.out.println("Bloque finally");
+		}
+		
+		System.out.println("Saliendo de la excepción...");*/
+		
+		
+		//Instanciación de la clase, uso del constructor sobrecargado
+		Estudiante estudiHambre = new Estudiante(2,"Juancho");
+		//Obtener los datos de forma segura
+		System.out.println(estudiHambre.getCodigo()+" : "+estudiHambre.getNombre());
+		//Cambiar los valores
+		estudiHambre.setCodigo(4);
+		estudiHambre.setNombre("Gloria");
+		//Obtener los datos de forma segura
+		System.out.println("\n"+estudiHambre.getCodigo()+" : "+estudiHambre.getNombre());
+		
+		//Llamar al método sin modificador de acceso
+		estudiHambre.probar();
+		
+		Sacapuntas sacaPuntas = new Sacapuntas(456,"filo");
+		
+		sacaPuntas.probarSacapuntas();
+		
+		id2++;
+		System.out.println("\n Id del desorden: "+id2);
+		//probarEstatico();
+		
+		//valorFinal = 0;
+		
+	} //Fin del main
+	
+	//Método estático
+	/*public static void probarEstatico()
+	{
+		id = 99999;
+		System.out.println("\n"+id);
+		main(null);
+	}*/
   
 }
