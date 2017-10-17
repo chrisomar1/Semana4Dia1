@@ -113,12 +113,12 @@ public class Main {
 		
 		//Switch de la mexicana que fruta vendía.
 		System.out.println("\n\n");
-		/*
-		String opcion = "Chana";
-
+		
+		/*String opcion = "Chana";
+		Scanner lector = new Scanner(System.in);
 		do
 		{
-			Scanner lector = new Scanner(System.in);
+			
 			opcion = lector.nextLine();
 			
 			switch(opcion)
@@ -133,12 +133,15 @@ public class Main {
 			case "Chona":
 				System.out.println("Chona!!");
 				break;
+			case "Christian":
+				System.out.println("Gracias por visitar la aplicación");
+				break;
 			default:
 				System.out.println("Ninguno!!");
 				break;
 			
 			}
-		}while(opcion!="Christian");	*/	
+		}while(!opcion.equals("Christian"));	*/	
 		
 		//Le da equals el método
 		/*String cadena5 = "Hola";
@@ -169,6 +172,7 @@ public class Main {
 		
 		CuentaPalabras cPlb = new CuentaPalabras(7);
 		cPlb.cuentaLetras();
+		cPlb.hola();
 	}
   
 }

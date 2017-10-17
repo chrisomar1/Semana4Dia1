@@ -39,4 +39,11 @@ public class CuentaPalabras
 			}
 		}
 	}
+	
+	public void hola()
+	{
+		System.out.println("Hola Mundo");
+	}
+	
+	//Crear otro método que de una salida en pantalla.s
 }
