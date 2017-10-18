@@ -246,6 +246,7 @@ public class Main {
 		
 		id2++;
 		System.out.println("\n Id del desorden: "+id2);
+		//id2=id2++;
 		//probarEstatico();
 		
 		//valorFinal = 0;
