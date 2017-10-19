@@ -27,6 +27,9 @@ public class Main {
 		gata.molestar(gatillo.nombre);
 		gata.comer();
 		gata.dormir();*/
+		
+		Garfield gato = new Garfield("Garfield");
+		System.out.println(gato.getNombre());
 
 		
 	}
