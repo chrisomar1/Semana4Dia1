@@ -40,7 +40,7 @@ public class Main {
 			Gson gson = new Gson();
 			
 			
-			oSt.writeObject(dateFormat.format(date).toString());
+			oSt.writeObject(dateFormat.format(date).toString()); //.toString()
 			oSt.writeObject(gson.toJson(dateFormat.format(date)));
 			System.out.println(gson.toJson(dateFormat.format(date)));
 			
