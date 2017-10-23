@@ -1,12 +1,19 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 //import java.io.PrintWriter;
 import java.util.Scanner;
+
+import com.google.gson.Gson;
 
 public class Main {
 
@@ -15,8 +22,43 @@ public class Main {
 		// TODO Auto-generated method stub
 		//leerArchivo("C:/Users/ChristianOmar/Documents/prueba.txt");
 		//leerArchivoManual("C:/Users/ChristianOmar/Documents/prueba.txt");
-		escribirArchivo("C:/Users/ChristianOmar/Documents/prueba2.txt");
+		//escribirArchivo("C:/Users/ChristianOmar/Documents/prueba2.txt");
+		serializarObjeto("C:/Users/ChristianOmar/Documents/prueba3.txt");
+	}
+	
+	public static void serializarObjeto(String archivo)
+	{
 
+		try {
+			FileOutputStream salida;
+			salida = new FileOutputStream(archivo);
+			ObjectOutputStream oSt;
+			oSt = new ObjectOutputStream(salida);
+			oSt.writeObject("Today");
+			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			Date date = new Date();
+			Gson gson = new Gson();
+			
+			
+			oSt.writeObject(dateFormat.format(date).toString());
+			oSt.writeObject(gson.toJson(dateFormat.format(date)));
+			System.out.println(gson.toJson(dateFormat.format(date)));
+			
+			oSt.close();
+			System.out.println("Hecho...");
+			}
+	    catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+
+		
 	}
 	
 	public static void escribirArchivo(String archivo)
