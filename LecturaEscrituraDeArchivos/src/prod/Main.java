@@ -1,3 +1,4 @@
+package prod;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -115,7 +116,7 @@ public class Main {
 		}
 	}
 	
-	public static void leerArchivo (String archivo)
+	public static boolean leerArchivo (String archivo)
 	{
 		int nLinea = 0;
 		try {
@@ -129,9 +130,21 @@ public class Main {
 				nLinea++;
 			}
 			bfrd.close(); //Siempre cerrar el buffer.
-		} catch (Exception e) {
+			return true;
+		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return false;
+		}
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
 		}
 	}
 
